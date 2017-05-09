@@ -5,22 +5,17 @@
 function insertionSort(nums) {
   // loop through entire array
   for(let i = 0; i < nums.length; i++) {
-    // set a temporary variable which is the current element to be examined
-    let tmp = nums[i];
-    // set the index to be compared to the current element so that it only
-    // looks through the previously sorted elements
-    let j = i - 1;
-
-    // loop through the sorted portion of the array backwards (starting with the j'th element)
-    for(j; j >= 0 && nums[j] > tmp; j--) {
-      // if j isn't negative and the j'th element > current element, this will
-      // swap j'th element to current element index position
-      nums[j + 1] = nums[j];
+    // loop through all elements less than i'th element
+    for(let j = 0; j < i; j++) {
+      if(nums[i] < nums[j]) {
+        // remove the i'th element from the array
+        let spliced = nums.splice(i, 1)[0];
+        // add i'th element back into array at the j'th position
+        // essentially swapping their places.
+        nums.splice(j, 0, spliced);
+      }
     }
-    //
-    nums[j + 1] = tmp;
   }
-
   return nums;
 }
 
