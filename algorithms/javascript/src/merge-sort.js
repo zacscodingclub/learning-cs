@@ -6,7 +6,7 @@
 
 function mergeSort(nums) {
   if (nums.length < 2) { return nums };
-  console.log(`array length: ${nums}`);
+
   var middle = parseInt(nums.length / 2);
   var leftArray = nums.slice(0, middle);
   var rightArray = nums.slice(middle, nums.length);
