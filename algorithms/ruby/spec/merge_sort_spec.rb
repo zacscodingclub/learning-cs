@@ -7,7 +7,7 @@ RSpec.describe MergeSort do
 
     instance = MergeSort.new(nums)
 
-    expect(instance.sort).to eq(expected_array)
+    expect(instance.sorted_array).to eq(expected_array)
   end
 
   it "should sort a large array correctly" do
@@ -16,7 +16,7 @@ RSpec.describe MergeSort do
 
     instance = MergeSort.new(nums)
 
-    expect(instance.sort).to eq(expected_array)
+    expect(instance.sorted_array).to eq(expected_array)
   end
 
   it "should sort a very small array correctly" do
@@ -25,6 +25,6 @@ RSpec.describe MergeSort do
 
     instance = MergeSort.new(nums)
 
-    expect(instance.sort).to eq(expected_array)
+    expect(instance.sorted_array).to eq(expected_array)
   end
 end
