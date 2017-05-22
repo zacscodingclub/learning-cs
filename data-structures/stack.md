@@ -1,3 +1,5 @@
+# Stack
+
 Stack is an interface that adheres to the *"Last-In First-Out" (LIFO) mantra.* In a stack, *you can only push (add) or pop (remove.)* The last thing you pushed will be what pop returns to you (pop will also remove it from the stack.) Often they'll have a *method called peek too which just looks at the top value of the stack without modifying the stack.*
 
 ```javascript
